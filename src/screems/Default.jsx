@@ -1,7 +1,7 @@
-import Logo from './_components/Logo.jsx';
-import Description from "./_components/Description.jsx";
+import Logo from './Default/_components/Logo.jsx';
+import Description from "./Default/_components/Description.jsx";
 import OpenLink from '../components/OpenLink.jsx';
-import Contador from './_components/Contador.jsx';
+import Contador from './Default/_components/Contador.jsx';
 
 const Default = () => {
     return (
