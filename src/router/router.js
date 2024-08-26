@@ -4,6 +4,7 @@ import Product from '../screems/Product';
 
 import App from "../App";
 import Default from '../screems/Default';
+import LoginForm from '../screems/Forms/LoginForm';
 
 
 const routes = createBrowserRouter([
@@ -18,6 +19,10 @@ const routes = createBrowserRouter([
             {
                 path: '/product',
                 element: <Product />,
+            },
+            {
+                path: '/login',
+                element: <LoginForm />,
             },
         ]
     }

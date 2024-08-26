@@ -13,6 +13,9 @@ const Navbar = () => {
                 <li>
                     <Link to="/product">Product</Link>
                 </li>
+                <li>
+                    <Link to="/login">Login Form</Link>
+                </li>
             </ul>
         </nav>
     );
