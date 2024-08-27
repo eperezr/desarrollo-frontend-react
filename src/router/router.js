@@ -6,6 +6,8 @@ import App from "../App";
 import Default from '../screems/Default';
 import LoginForm from '../screems/Forms/LoginForm';
 
+const basename = process.env.NODE_ENV === 'production' ? '/desarrollo-frontend-react' : '/';
+
 
 const routes = createBrowserRouter([
     {
@@ -27,6 +29,10 @@ const routes = createBrowserRouter([
         ]
     }
 ],
+{
+    basename:    basename
+}
+
 );
 
 export default routes;
