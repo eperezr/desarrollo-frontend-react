@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion'
 
-const ModalInfo = ({ visible, message, onClose }) => {
+const ModalError = ({ visible, message, onClose }) => {
     if (!visible) {
         return null;
     }
@@ -28,4 +28,4 @@ const ModalInfo = ({ visible, message, onClose }) => {
 
 
 
-export default ModalInfo; 
+export default ModalError; 

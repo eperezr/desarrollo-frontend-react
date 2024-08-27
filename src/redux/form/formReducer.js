@@ -4,8 +4,9 @@ const initialState = {
     formData: {
         username: '',
         email: '',
+        password: '',
     },
-        password:'eddy'
+        password:'eddy',
 };
 
 const formReducer = (state = initialState, action) => {

@@ -3,20 +3,30 @@ import { useSelector, useDispatch } from 'react-redux';
 import {saveFormData} from "../../redux/form/formActions";
 import { motion } from 'framer-motion';
 import ModalInfo from "../../components/ModalInfo";
+import ModalError from "../../components/ModalError";
 
 import { useState } from "react";
 
 const LoginForm = () => {
     const [values, handleChange] = useForm({ username: '', email: ''});
+
     const [showModalInfo, setShowModalInfo] = useState(false);
+    const [modalMessage, setModalMessage] = useState(false);
+
+
     const form = useSelector(state => state.form);
     const dispatch = useDispatch();
 
     const handleSubmit = (event) => {
         event.preventDefault();
         console.log(values);
+        if (values.password !== form.password){
+        setModalMessage("contraseña incorrecta");
+        setShowModalInfo(true);
+        return;
+        }
         dispatch(saveFormData(values));
-    }
+    };
 
     const hideModalInfo = () => {
         setShowModalInfo(false);
@@ -24,7 +34,7 @@ const LoginForm = () => {
 
     const showModal = () => {
         setShowModalInfo(true);
-    }
+    };
 
     return (
         <motion.div
@@ -34,7 +44,7 @@ const LoginForm = () => {
         >
             <ModalInfo
                 visible={showModalInfo}
-                message="Bienvenidos al Modulo 7"
+                message={modalMessage}
                 onClose={hideModalInfo}
             />
             <div className="container">
@@ -81,4 +91,4 @@ const LoginForm = () => {
     );
 };
 
-export default LoginForm;
+export default LoginForm
