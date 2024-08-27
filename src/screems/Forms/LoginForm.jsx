@@ -3,7 +3,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import {saveFormData} from "../../redux/form/formActions";
 import { motion } from 'framer-motion';
 import ModalInfo from "../../components/ModalInfo";
-import ModalError from "../../components/ModalError";
+//import ModalError from "../../components/ModalError";
 
 import { useState } from "react";
 
@@ -12,6 +12,7 @@ const LoginForm = () => {
 
     const [showModalInfo, setShowModalInfo] = useState(false);
     const [modalMessage, setModalMessage] = useState(false);
+    const [showPassword, setShowPassword] = useState(false);
 
 
     const form = useSelector(state => state.form);
@@ -35,6 +36,10 @@ const LoginForm = () => {
     const showModal = () => {
         setShowModalInfo(true);
     };
+
+    const togglePasswordVisibility = () => {
+        setShowPassword(!showPassword);
+      };
 
     return (
         <motion.div
@@ -74,12 +79,15 @@ const LoginForm = () => {
                     <div>
                         <label htmlFor="email">Password</label>
                         <input
-                            type="password"
-                            id="password"
-                            name="password"
-                            value={values.password}
+                            type={showPassword ? "text" : "password"} 
+                            name="password" 
+                            id="password" 
+                            value={values.password} 
                             onChange={handleChange}
                         />
+                        <button type="button" onClick={togglePasswordVisibility}>
+                        {showPassword ? "ocultar" : "mostrar"}
+                        </button>
                     </div>
                     <div className="button-container">
                         <button type="submit">Submit</button>
