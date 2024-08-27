@@ -5,14 +5,17 @@ import { motion } from 'framer-motion';
 import ModalInfo from "../../components/ModalInfo";
 //import ModalError from "../../components/ModalError";
 
+
 import { useState } from "react";
 
 const LoginForm = () => {
-    const [values, handleChange] = useForm({ username: '', email: ''});
+    const [values, handleChange, resetForm] = useForm({ username :'', email: '', password: ''});
 
     const [showModalInfo, setShowModalInfo] = useState(false);
     const [modalMessage, setModalMessage] = useState(false);
     const [showPassword, setShowPassword] = useState(false);
+
+    const [type, setType] = useState('');
 
 
     const form = useSelector(state => state.form);
@@ -29,16 +32,24 @@ const LoginForm = () => {
         dispatch(saveFormData(values));
     };
 
-    const hideModalInfo = () => {
-        setShowModalInfo(false);
-    };
-
     const showModal = () => {
         setShowModalInfo(true);
     };
 
     const togglePasswordVisibility = () => {
         setShowPassword(!showPassword);
+      };
+
+      const handleLogout = () => {
+        setModalMessage(`${form.formData.username}, quieres salir?`);
+        setShowModalInfo(true);
+        setType("logout");
+      };
+    
+      const hideModalInfo = (logout) => {
+        setShowModalInfo(false);
+        if (logout === 'logout') 
+            resetForm();
       };
 
     return (
@@ -50,6 +61,7 @@ const LoginForm = () => {
             <ModalInfo
                 visible={showModalInfo}
                 message={modalMessage}
+                type={type}
                 onClose={hideModalInfo}
             />
             <div className="container">
@@ -89,9 +101,19 @@ const LoginForm = () => {
                         {showPassword ? "ocultar" : "mostrar"}
                         </button>
                     </div>
+                    <div>
+                        {form.formData.username ? (
+                        <a className="App-link logout" onClick={handleLogout}>Logout</a>
+                        ) : (
+                        <div className="button-container">
+                        <button type="submit">Login</button>
+                        </div>
+                        )};
+                    
                     <div className="button-container">
                         <button type="submit">Submit</button>
                         <button onClick={showModal}>Mostrar Modal</button>
+                    </div>
                     </div>
                 </form>
             </div>

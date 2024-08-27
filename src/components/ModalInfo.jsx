@@ -1,6 +1,14 @@
 import { motion } from 'framer-motion'
+import { saveFormData } from "../redux/form/formActions";
+import { useDispatch } from "react-redux";
 
-const ModalInfo = ({ visible, message, onClose }) => {
+const ModalInfo = ({ visible, message,type, onClose }) => {
+    const dispatch = useDispatch();
+    const logout = () => {
+      dispatch(saveFormData({ email: "", password: "", username: "" }));
+      onClose('logout');
+    };
+
     if (!visible) {
         return null;
     }
@@ -8,7 +16,7 @@ const ModalInfo = ({ visible, message, onClose }) => {
     return (
         <div className="modal-overlay">
             <motion.div
-                className="notification-success"
+                className={`notification ${type}`}
                 initial={{opacity: 0, y: -20}}
                 animate={{opacity: 1, y: 0}}
                 transition={{duration: 0.5}}
@@ -16,11 +24,12 @@ const ModalInfo = ({ visible, message, onClose }) => {
                 <div>
                     <p>{message}</p>
                 </div>
-                <button
-                    className="close-btn-success"
-                    onClick={onClose}>
-                    X
-                </button>
+                <button className="close-btn" onClick={onClose}>x</button>
+        {type === 'logout' && (
+          <div className="button-container">
+            <button type="button" onClick={logout}>Clck here to logout!!!</button>
+          </div>
+        )}
             </motion.div>
         </div>
     );
