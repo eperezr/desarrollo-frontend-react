@@ -1,9 +1,10 @@
 import { useSelector, useDispatch } from "react-redux";
 import {useEffect} from "react";
-import {setProducts} from "../../../redux/product/productActions";
+import {setProducts} from "../../redux/product/productActions";
+import FilterableProductTable from "./_components/FilterableProductTable";
 
 const Home = () => {
-    const product = useSelector((state) => state.product);
+    const products = useSelector((state) => state.product.PRODUCTS);
     const dispatch = useDispatch();
 
     useEffect(() => {
@@ -17,12 +18,13 @@ const Home = () => {
                 { category: "Vegetables", price: "$1", stocked: true, name: "Peas" }
             ])
         )
-    }, []);
+    }, [dispatch]);
 
     return (
-        <>
-            <h5>{JSON.stringify(product.PRODUCTS)}</h5>
-        </>
+        <div style={{ width: '300px', margin: '0 auto' }}>
+        <h1>Fruits</h1>
+        <FilterableProductTable products={products} />
+      </div>
     );
 };
 
