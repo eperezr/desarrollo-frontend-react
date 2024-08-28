@@ -1,9 +1,10 @@
 import Home from "./Products/Home";
+import HomeTest from './Products/HomeTest.jsx'
 
 const Product = () => {
     return (
         <>
-            <Home />
+            <HomeTest />
         </>
     );
 }

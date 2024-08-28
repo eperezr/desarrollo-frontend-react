@@ -1,5 +1,6 @@
 import ProductCategoryRow from "./ProductCategoryRow";
 import ProductRow from "./ProductRow";
+import { useState } from 'react';
 
 const ProductTable = ({
   products,
