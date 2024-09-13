@@ -1,21 +1,43 @@
-import Titulo from "./Titulo";
-
 const Contenido = () => {
-  return (
-    <section className="contenido">
-      <Titulo title="Temas Cubiertos" />
-      <ul>
-        <li>Componentes funcionales y de clase</li>
-        <li>Use de <span>React hooks</span> como useState y useEffect</li>
-        <li>Creación de <span>custom hooks</span> como useForm</li>
-        <li>Gestión de variables de estado con <span>useState</span></li>
-        <li>Gestión de estado global con <span>Redux</span></li>
-        <li>Integración de <span>Redux</span> con <span>React</span></li>
-        <li>Manejo de <span>Formularios</span> en <span>React</span></li>
-        <li>Publicando nuestra <span>Página</span> con <span>GitHub Pages</span></li>
-      </ul>
-    </section>
-  );
+    return (
+        //section1
+        <div className="section2">
+            <div>
+                <h1>
+                    Temas Cubiertos
+                </h1>
+            </div>
+            <div>
+                <table>
+                    <td>
+                        Componentes funcionales y de clase
+                    </td>
+                    <td>
+                        Uso de React hooks como useState y useEffect
+                    </td>
+                    <td>
+                        Creacion de custom hooks como useForm
+                    </td>
+                    <td>
+                        Gestion de variables de estado con useState
+                    </td>
+                    <td>
+                        Gestion de estado global con Redux
+                    </td>
+                    <td>
+                        Integracion de Redux con React
+                    </td>
+                    <td>
+                        Manejo de Formularios en React
+                    </td>
+                    <td>
+                        Publicando nuestra pagina en GitHub Pages
+                    </td>
+                </table>
+
+            </div>
+        </div>
+    );
 };
 
 export default Contenido;

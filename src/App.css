@@ -158,3 +158,23 @@ form div input {
   cursor: pointer;
 }
 /* styles for modals */
+
+button:hover {
+  background-color: #3e8e41;
+}
+
+.dictionary-container {
+  margin-top: 20px;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  background-color: #f9f9f9;
+}
+
+#word-input {
+  margin-top: 20px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  width: 50%;
+}

@@ -1,9 +1,11 @@
-const Titulo = ({ title }) => {
+const Titulo = () => {
     return (
-      <div className="Titulo">
-        <h2>{ title }</h2>
-      </div>
+        <div className="cuadrado">
+            <h1>
+            Modulo 7: DESARROLLO FRONTEND CON REACTJS
+            </h1>
+        </div>
     );
-  };
-  
-  export default Titulo;
+};
+
+export default Titulo;
