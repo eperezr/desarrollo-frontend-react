@@ -158,6 +158,42 @@ form div input {
   cursor: pointer;
 }
 /* styles for modals */
+.cuadrado {
+  background-color: green;
+  color: white;
+  margin-top: 70px;
+  margin-left: 200px;
+  margin-right: 200px;
+  padding: 20px;
+  position: center;
+  border: 2px solid darkgreen;
+  border-radius: 8px;
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
+.section1{
+  margin-top: 10px;
+  margin-left: 200px;
+  margin-right: 200px;
+  padding: 20px;
+  position: center;
+  font-family: Arial, sans-serif;
+}
+.section2{
+  margin-top: 10px;
+  margin-left: 200px;
+  margin-right: 200px;
+  padding: 20px;
+  position: center;
+  font-family: Arial, sans-serif;
+}
+.navUser{
+  position: right;
+  text-align: right;
+  margin-right: 2rem;
+  color: white;
+
+}
 
 button:hover {
   background-color: #3e8e41;

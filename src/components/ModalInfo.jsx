@@ -16,9 +16,9 @@ const ModalInfo = ({ visible, message,type, onClose }) => {
     return (
         <div className="modal-overlay">
             <motion.div
-                className={`notification ${type}`}
-                initial={{opacity: 0, y: -20}}
-                animate={{opacity: 1, y: 0}}
+                className='notification-success'
+                initial={{opacity: 0, scale: 0.5}}
+                animate={{opacity: 1, scale: 1}}
                 transition={{duration: 0.5}}
             >
                 <div>
