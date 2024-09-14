@@ -1,0 +1,64 @@
+.button-container button {
+  background-color: #333;
+  color: #ccc; /* Cambiado de #fff a #ccc para que sea más visible */
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  margin: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.modal-content {
+  background-color: #444;
+  padding: 20px;
+  border-radius: 8px;
+  width: 400px;
+  position: relative;
+  color: #ccc; /* Cambiado de #fff a #ccc para que sea más visible */
+}
+
+.modal-content h2 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  color: #ccc; /* Cambiado de #fff a #ccc para que sea más visible */
+}
+
+.dictionary-container {
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  color: #ccc; /* Cambiado de #fff a #ccc para que sea más visible */
+  text-align: center;
+  background-color: #333;
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #ccc; /* Cambiado de #fff a #ccc para que sea más visible */
+}
+
+h2 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  color: #ccc; /* Cambiado de #fff a #ccc para que sea más visible */
+}
+
+.form-group label {
+  display: inline-block;
+  width: 150px;
+  color: #ccc; /* Cambiado de #fff a #ccc para que sea más visible */
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: calc(100% - 160px);
+  padding: 8px;
+  font-size: 1rem;
+  border-radius: 4px;
+  border: 1px solid #555;
+  background-color: #444;
+  color: #ccc; /* Cambiado de #fff a #ccc para que sea más visible */
+}
