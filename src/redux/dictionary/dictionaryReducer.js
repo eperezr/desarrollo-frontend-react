@@ -36,13 +36,13 @@ const dictionaryReducer = (state = initialState, action) => {
 
         switch (language) {
           case 'English':
-            translation = wordEntry.english || 'Traducción no disponible';
+            translation = wordEntry.english || 'no se encuentra traduccion, vuelva a intentar';
             break;
           case 'Spanish':
-            translation = wordEntry.spanish || 'Traducción no disponible';
+            translation = wordEntry.spanish || 'no se encuentra traduccion, vuelva a intentar';
             break;
           case 'Portuguese':
-            translation = wordEntry.portuguese || 'Traducción no disponible';
+            translation = wordEntry.portuguese || 'no se encuentra traduccion, vuelva a intentar';
             break;
           default:
             translation = 'Idioma no compatible';
@@ -56,8 +56,8 @@ const dictionaryReducer = (state = initialState, action) => {
       } else {
         return {
           ...state,
-          translation: 'Palabra no encontrada',
-          error: 'Palabra no encontrada', 
+          translation: 'no esta dentro el diccionario',
+          error: 'no esta dentro el diccionario', 
         };
       }
     case CLEAR_TRANSLATION:
