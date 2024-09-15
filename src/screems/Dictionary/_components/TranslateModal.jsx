@@ -28,8 +28,8 @@ const TranslateModal = ({ isOpen, closeModal }) => {
       <div className="modal-content">
         <h2>Traductor USIP</h2>
         <span className="close" onClick={closeModal}>&times;</span>
-        <h4>¿Qué palabra desea traducir en el diccionario?</h4>
-        <h4>Agregue su palabra y después el idioma de traducción</h4>
+        <h4>Qué palabra desea traducir en el diccionario?</h4>
+        <h4>Agregue una palabra y el idioma</h4>
         <form>
           <div className="form-group">
             <label>Palabra a traducir:</label>
@@ -46,10 +46,10 @@ const TranslateModal = ({ isOpen, closeModal }) => {
               value={language}
               onChange={(e) => setLanguage(e.target.value)}
             >
-              <option value="English">English</option>
-              <option value="Spanish">Spanish</option>
+              <option value="English">Ingles</option>
+              <option value="Spanish">Español</option>
               <option value="Portuguese">Portuguese</option>
-              <option value="Other">Other</option>
+              <option value="Other">Otros</option>
             </select>
           </div>
           <textarea readOnly value={translation} />

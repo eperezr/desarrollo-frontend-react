@@ -31,8 +31,8 @@ const ModalComponent = ({ isOpen, closeModal }) => {
       <div className="modal-content">
         <h2>Traductor USIP</h2>
         <span className="close" onClick={closeModal}>&times;</span>
-        <h4>¿Qué palabra desea eliminar del diccionario?</h4>
-        <h4>Puede escribir su palabra en ESPAÑOL, INGLÉS o PORTUGUÉS</h4>
+        <h4>¿Desea eliminar una palabra?</h4>
+        <h4>Puede escribir su palabra en español, ingles o portugues para eliminar</h4>
         <form>
           <label>Palabra:</label>
           <input
